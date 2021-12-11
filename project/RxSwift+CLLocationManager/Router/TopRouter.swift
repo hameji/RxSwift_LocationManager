@@ -20,7 +20,10 @@ final class TopRouter {
     
     // DependencyInjection
     static func assembleModules() -> UIViewController {
-        let view = TopViewController()
+        let topStoryboard = UIStoryboard(name: "TopView", bundle: nil)
+        guard let view = topStoryboard.instantiateInitialViewController() as? TopViewController else {
+            return UIViewController()
+        }
         let router = TopRouter(viewController: view)
         let locationManagerInteractor = LocationManagerInteractor()
         let presenter = TopPresenter(view: view,
