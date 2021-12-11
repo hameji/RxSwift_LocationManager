@@ -18,6 +18,7 @@
 		632D491727644755001B546F /* TopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D491627644755001B546F /* TopRouter.swift */; };
 		632D4919276448EC001B546F /* LocationManagerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D4918276448EC001B546F /* LocationManagerInteractor.swift */; };
 		632D492327644F5A001B546F /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D492227644F5A001B546F /* CLLocationManager+Rx.swift */; };
+		632D49262764524E001B546F /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D49252764524E001B546F /* PresenterType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		632D491627644755001B546F /* TopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRouter.swift; sourceTree = "<group>"; };
 		632D4918276448EC001B546F /* LocationManagerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerInteractor.swift; sourceTree = "<group>"; };
 		632D492227644F5A001B546F /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		632D49252764524E001B546F /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
 		6F7A3B305F9008CC7F9A1D41 /* Pods_RxSwift_CLLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_CLLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFEF10A2D1D4F901865F204 /* Pods-RxSwift+CLLocationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift+CLLocationManager.release.xcconfig"; path = "Target Support Files/Pods-RxSwift+CLLocationManager/Pods-RxSwift+CLLocationManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 			children = (
 				632D4900276433C5001B546F /* AppDelegate.swift */,
 				632D4902276433C5001B546F /* SceneDelegate.swift */,
+				632D49242764523B001B546F /* Enum */,
 				632D492127644F44001B546F /* Extension */,
 				632D491A27644C53001B546F /* View */,
 				632D491D27644C71001B546F /* Interactor */,
@@ -132,6 +135,14 @@
 				632D492227644F5A001B546F /* CLLocationManager+Rx.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		632D49242764523B001B546F /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				632D49252764524E001B546F /* PresenterType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		81781310E07A953D8FA2B719 /* Frameworks */ = {
@@ -265,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632D49262764524E001B546F /* PresenterType.swift in Sources */,
 				632D49152764466A001B546F /* TopPresenter.swift in Sources */,
 				632D491727644755001B546F /* TopRouter.swift in Sources */,
 				632D492327644F5A001B546F /* CLLocationManager+Rx.swift in Sources */,
