@@ -71,16 +71,56 @@
 			children = (
 				632D4900276433C5001B546F /* AppDelegate.swift */,
 				632D4902276433C5001B546F /* SceneDelegate.swift */,
-				632D4918276448EC001B546F /* LocationManagerInteractor.swift */,
-				632D4904276433C5001B546F /* TopViewController.swift */,
-				632D49142764466A001B546F /* TopPresenter.swift */,
-				632D491627644755001B546F /* TopRouter.swift */,
-				632D4906276433C5001B546F /* TopView.storyboard */,
+				632D491A27644C53001B546F /* View */,
+				632D491D27644C71001B546F /* Interactor */,
+				632D491C27644C68001B546F /* Presenter */,
+				632D491E27644C7E001B546F /* Entity */,
+				632D491F27644C89001B546F /* Router */,
 				632D4909276433C9001B546F /* Assets.xcassets */,
 				632D490B276433C9001B546F /* LaunchScreen.storyboard */,
 				632D490E276433C9001B546F /* Info.plist */,
 			);
 			path = "RxSwift+CLLocationManager";
+			sourceTree = "<group>";
+		};
+		632D491A27644C53001B546F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				632D4904276433C5001B546F /* TopViewController.swift */,
+				632D4906276433C5001B546F /* TopView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		632D491C27644C68001B546F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				632D49142764466A001B546F /* TopPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		632D491D27644C71001B546F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				632D4918276448EC001B546F /* LocationManagerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		632D491E27644C7E001B546F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		632D491F27644C89001B546F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				632D491627644755001B546F /* TopRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		81781310E07A953D8FA2B719 /* Frameworks */ = {
