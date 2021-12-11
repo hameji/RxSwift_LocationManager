@@ -85,6 +85,9 @@
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dL0-Pw-bii"/>
                                                                         </constraints>
                                                                         <state key="normal" title="現在地を取得する"/>
+                                                                        <connections>
+                                                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em2-iu-jvf"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,6 +139,11 @@
                             <constraint firstItem="Hi9-u0-xTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LQO-VK-Jnh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="latitudeLabel" destination="LG6-Qo-ToO" id="Uha-XE-QQ4"/>
+                        <outlet property="longitudeLabel" destination="n1x-H9-ywk" id="EcX-zL-gvU"/>
+                        <outlet property="startGPSButton" destination="azY-Pf-hvY" id="ehL-rF-eS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
