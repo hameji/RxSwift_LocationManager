@@ -7,12 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+protocol TopView: AnyObject {
+    
+}
+
+class TopViewController: UIViewController {
     
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     
     @IBOutlet weak var startGPSButton: UIButton!
+    
+    var presenter: TopPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,3 +27,6 @@ class ViewController: UIViewController {
     
 }
 
+extension TopViewController: TopView {
+    
+}
