@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import CoreLocation
+import RxSwift
+import RxCocoa
 
 protocol TopPresentation: AnyObject {
     
@@ -24,6 +27,31 @@ class TopPresenter {
         self.locationManagerInteractor = locationManagerInteractor
     }
 }
+
+extension TopPresenter: PresenterType {
+
+    struct Input {
+        let gpsTrigger: ControlEvent<Void>
+    }
+    
+    struct Output {
+        let latitude: Observable<String>
+        let longitude: Observable<String>
+    }
+    
+    struct State {
+    }
+    
+    func transform(input: TopPresenter.Input) -> TopPresenter.Output {
+        let location = input.gpsTrigger.flatMapLatest { _ in
+            self.locationManagerInteractor.getCoordinate()
+        }
+        let latitude = location.map { String($0.coordinate.latitude) }
+        let longitude = location.map { String($0.coordinate.longitude) }
+        return TopPresenter.Output(latitude: latitude, longitude: longitude)
+    }
+}
+
 extension TopPresenter: TopPresentation {
     
 }
