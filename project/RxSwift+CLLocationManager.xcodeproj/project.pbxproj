@@ -11,9 +11,12 @@
 		632D4901276433C5001B546F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D4900276433C5001B546F /* AppDelegate.swift */; };
 		632D4903276433C5001B546F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D4902276433C5001B546F /* SceneDelegate.swift */; };
 		632D4905276433C5001B546F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D4904276433C5001B546F /* TopViewController.swift */; };
-		632D4908276433C5001B546F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632D4906276433C5001B546F /* Main.storyboard */; };
+		632D4908276433C5001B546F /* TopView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632D4906276433C5001B546F /* TopView.storyboard */; };
 		632D490A276433C9001B546F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632D4909276433C9001B546F /* Assets.xcassets */; };
 		632D490D276433C9001B546F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632D490B276433C9001B546F /* LaunchScreen.storyboard */; };
+		632D49152764466A001B546F /* TopPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D49142764466A001B546F /* TopPresenter.swift */; };
+		632D491727644755001B546F /* TopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D491627644755001B546F /* TopRouter.swift */; };
+		632D4919276448EC001B546F /* LocationManagerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D4918276448EC001B546F /* LocationManagerInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +25,13 @@
 		632D4900276433C5001B546F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		632D4902276433C5001B546F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		632D4904276433C5001B546F /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		632D4907276433C5001B546F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		632D4907276433C5001B546F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TopView.storyboard; sourceTree = "<group>"; };
 		632D4909276433C9001B546F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632D490C276433C9001B546F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		632D490E276433C9001B546F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632D49142764466A001B546F /* TopPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPresenter.swift; sourceTree = "<group>"; };
+		632D491627644755001B546F /* TopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRouter.swift; sourceTree = "<group>"; };
+		632D4918276448EC001B546F /* LocationManagerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerInteractor.swift; sourceTree = "<group>"; };
 		6F7A3B305F9008CC7F9A1D41 /* Pods_RxSwift_CLLocationManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_CLLocationManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFEF10A2D1D4F901865F204 /* Pods-RxSwift+CLLocationManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift+CLLocationManager.release.xcconfig"; path = "Target Support Files/Pods-RxSwift+CLLocationManager/Pods-RxSwift+CLLocationManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +71,11 @@
 			children = (
 				632D4900276433C5001B546F /* AppDelegate.swift */,
 				632D4902276433C5001B546F /* SceneDelegate.swift */,
+				632D4918276448EC001B546F /* LocationManagerInteractor.swift */,
 				632D4904276433C5001B546F /* TopViewController.swift */,
-				632D4906276433C5001B546F /* Main.storyboard */,
+				632D49142764466A001B546F /* TopPresenter.swift */,
+				632D491627644755001B546F /* TopRouter.swift */,
+				632D4906276433C5001B546F /* TopView.storyboard */,
 				632D4909276433C9001B546F /* Assets.xcassets */,
 				632D490B276433C9001B546F /* LaunchScreen.storyboard */,
 				632D490E276433C9001B546F /* Info.plist */,
@@ -152,7 +161,7 @@
 			files = (
 				632D490D276433C9001B546F /* LaunchScreen.storyboard in Resources */,
 				632D490A276433C9001B546F /* Assets.xcassets in Resources */,
-				632D4908276433C5001B546F /* Main.storyboard in Resources */,
+				632D4908276433C5001B546F /* TopView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,21 +214,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632D49152764466A001B546F /* TopPresenter.swift in Sources */,
+				632D491727644755001B546F /* TopRouter.swift in Sources */,
 				632D4905276433C5001B546F /* TopViewController.swift in Sources */,
 				632D4901276433C5001B546F /* AppDelegate.swift in Sources */,
 				632D4903276433C5001B546F /* SceneDelegate.swift in Sources */,
+				632D4919276448EC001B546F /* LocationManagerInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		632D4906276433C5001B546F /* Main.storyboard */ = {
+		632D4906276433C5001B546F /* TopView.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				632D4907276433C5001B546F /* Base */,
 			);
-			name = Main.storyboard;
+			name = TopView.storyboard;
 			sourceTree = "<group>";
 		};
 		632D490B276433C9001B546F /* LaunchScreen.storyboard */ = {
